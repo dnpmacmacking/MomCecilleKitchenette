@@ -9,6 +9,17 @@
 </head>
 <body>
 	<audio autoplay loop><source src="good-night-160166.mp3" type = "audio/mpeg" volume = "40"></audio>
+	<script>
+	document.addEventListener('play', function(e) {
+    var audios = document.getElementsByTagName('audio');
+
+    for (var i = 0, len = audios.length; i < len; i++) {
+        if (audios[i] != e.target) {
+            audios[i].pause();
+        }
+    }
+}, true);
+	</script>
 	<header>
 		<center><img src = "MomCecille'sKitchinette Logo.png" height = "250" width = "500"></center>
 	<nav class="secondary_header" id="menu">
